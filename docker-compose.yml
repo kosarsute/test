@@ -1,0 +1,12 @@
+services:
+  test1:
+    build:
+     context: .
+    container_name: app
+    command: ["npx", "cypress", "run", "--spec", "cypress/e2e/1-getting-started/todo.cy.js"]
+  test2:
+    build:
+     context: .
+    container_name: app2
+    command: ["npx", "cypress", "run", "--spec", "cypress/e2e/2-advanced-examples/actions.cy.js"]
+  
