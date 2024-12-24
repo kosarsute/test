@@ -20,7 +20,8 @@ describe('example to-do app', () => {
     cy.visit('https://google.com')
   })
 
-  it.only('displays two todo items by default', () => {
+  it('displays two todo items by default', () => {
+    expect(true).to.equal(false);
     // We use the `cy.get()` command to get all elements that match the selector.
     // Then, we use `should` to assert that there are two matched items,
     // which are the two default items.
@@ -55,7 +56,7 @@ describe('example to-do app', () => {
     // Since assertions yield the element that was asserted on,
     // we can chain both of these assertions together into a single statement.
     cy.get('.todo-list li')
-      .should('have.length', 2)
+      .should('have.length', 3)
       .last()
       .should('have.text', newItem)
   })
