@@ -4,6 +4,8 @@ services:
      context: .
     container_name: app
     command: ["npx", "cypress", "run", "--spec", "cypress/e2e/1-getting-started/todo.cy.js"]
+    environment: 
+    - ENV_TYPE=${ENV_TYPE}
     volumes:
       - .:/app
   test2:
@@ -11,5 +13,7 @@ services:
      context: .
     container_name: app2
     command: ["npx", "cypress", "run", "--spec", "cypress/e2e/2-advanced-examples/actions.cy.js"]
+    environment: 
+    - ENV_TYPE=${ENV_TYPE}
     volumes:
      - .:/app
