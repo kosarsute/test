@@ -15,7 +15,8 @@ WORKDIR /home/appuser
 RUN mkdir -p cypress/reports/mochawesome
 
 # Create writable directories for Cypress
-RUN mkdir -p /home/appuser/cypress/screenshots /home/appuser/cypress/reports
+RUN mkdir -p /home/appuser/cypress/screenshots /home/appuser/cypress/reports && \
+    chmod -R 777 /home/appuser/cypress/screenshots /home/appuser/cypress/reports
 
 # Set up npm global install location to avoid permission issues
 RUN mkdir -p /home/appuser/.npm-global && \
