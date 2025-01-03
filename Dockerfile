@@ -17,7 +17,6 @@ RUN mkdir -p /home/appuser/cypress/videos \
 
 # Set working directory and switch to appuser
 WORKDIR /home/appuser
-USER appuser
 
 # Copy application files and install dependencies
 COPY package.json .
