@@ -7,7 +7,7 @@ services:
     - ENV_TYPE=${ENV_TYPE}
     command: ["npx", "cypress", "run", "--spec", "cypress/e2e/1-getting-started/todo.cy.js"]
     volumes:
-      - .:/app
+      - .:/home/appuser
   test2:
     build:
      context: .
@@ -16,4 +16,4 @@ services:
     - ENV_TYPE=${ENV_TYPE}
     command: ["npx", "cypress", "run", "--spec", "cypress/e2e/2-advanced-examples/actions.cy.js"]
     volumes:
-     - .:/app
+     - .:/home/appuser
