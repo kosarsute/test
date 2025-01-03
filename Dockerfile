@@ -5,6 +5,8 @@ ARG UID=1001
 ARG GID=1001
 
 # Create a group and user dynamically
+RUN groupadd -g $GID appgroup && \
+    useradd -m -u $UID -g appgroup appuser
 
 # Switch to appuser
 USER appuser
